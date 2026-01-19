@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "KeyMap",
+  "description": "Type a keyword in the omnibox to quickly open mapped URLs.",
+  "version": "1.0",
+  "permissions": ["storage", "tabs"],
+  "omnibox": { "keyword": "k" },
+  "background": { "service_worker": "./background.js" },
+  "options_page": "./options.html",
+  "icons": {
+    "16": "../assets/icon16.png",
+    "32": "../assets/icon32.png",
+    "48": "../assets/icon48.png",
+    "96": "../assets/icon96.png",
+    "128": "../assets/icon128.png"
+  }
+}

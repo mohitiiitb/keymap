@@ -1,0 +1,83 @@
+body {
+  padding: 20px;
+  background: #fff;
+  color: #000;
+  font-family: sans-serif;
+}
+
+#addForm {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+#keyword { flex: 3; min-width: 100px; }
+#url { flex: 5; min-width: 100px; }
+#save { flex: 2; min-width: 80px; cursor: pointer; }
+#keyword, #url, #save {
+  box-sizing: border-box;
+  height: 36px;
+  font-size: 16px;
+  padding: 4px 8px;
+}
+
+#searchContainer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+#searchInput { flex: 7; padding: 6px; }
+#importBtn, #exportBtn, #deleteAllBtn { flex: 1; cursor: pointer; padding: 6px; }
+
+#tableContainer { display: flex; justify-content: center; }
+table { width: 100%; border-collapse: collapse; background: #f9f9f9; color: #000; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+th { background: #eee; }
+th:nth-child(1), td:nth-child(1) { width: 30%; }
+th:nth-child(2), td:nth-child(2) { width: 70%; }
+table tr:hover { background: #ddd; }
+
+button:hover { background-color: #ccc; }
+input[type="file"] { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000000;
+    color: #eeeeee;
+  }
+
+  #keyword, #url, #save,
+  #searchInput, #importBtn, #exportBtn, #deleteAllBtn {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #555;
+  }
+
+  button:hover {
+    background: #333;
+  }
+
+  table {
+    background: #000000;
+    color: #e0e0e0;
+  }
+
+  th {
+    background: #2a2a2a;
+  }
+
+  table tr:hover {
+    background: #333;
+  }
+
+  table td a {
+    color: #ffea00;
+  }
+
+  #keyword::placeholder,
+  #url::placeholder,
+  #searchInput::placeholder {
+    color: #cccccc;
+  }
+}
+

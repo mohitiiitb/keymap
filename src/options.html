@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyword Mapping</title>
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <h4>Update Mappings (Keep URL empty to delete)</h4>
+  <form id="addForm">
+    <input id="keyword" type="text" placeholder="Keyword" required>
+    <input id="url" type="url" placeholder="URL" required>
+    <button type="button" id="save">Save</button>
+  </form>
+
+  <h4>Current Mappings</h4>
+  <div id="searchContainer" style="display:flex; gap:10px; margin-bottom:10px;">
+    <input type="text" id="searchInput" placeholder="Search by keyword or URL" style="flex:7; padding:6px;">
+    <input type="file" id="importFile" accept=".json" style="display:none;">
+    <button type="button" id="importBtn" style="flex:1;">Import JSON</button>
+    <button type="button" id="exportBtn" style="flex:1;">Export JSON</button>
+    <button type="button" id="deleteAllBtn">Delete All</button>
+  </div>
+
+  <div id="tableContainer">
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Keyword</th>
+          <th>URL</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="./options.js"></script>
+</body>
+</html>
